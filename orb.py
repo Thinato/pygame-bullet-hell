@@ -42,7 +42,8 @@ class Orb:
 		game.mutation_cp = game.current_time
 
 		if self.mutation == 'speed+':
-			game.player.speed += 1
+			if game.player.speed != game.player.max_speed:
+				game.player.speed += 1
 		elif self.mutation == 'regen+':
 			game.player.regen += 1
 		elif self.mutation == 'health+':

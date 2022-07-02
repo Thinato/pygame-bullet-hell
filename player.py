@@ -7,6 +7,7 @@ class Player:
 		self.size = (16,16)
 		self.rect = pg.Rect((screen.get_size()[0]//2 - self.size[0]//2, screen.get_size()[1]//2 - self.size[1]//2 + (80-self.size[0])), self.size )
 		self.speed = 1
+		self.max_speed = 3
 		self.defense = 1
 
 		self.immunity_cp = 0

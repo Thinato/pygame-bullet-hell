@@ -176,7 +176,16 @@ class Game:
 
 
 	def draw_menu(self, screen):
-		pg.draw.rect(screen, WHITE, (screen.get_size()[0]//2, screen.get_size()[1]//2, 100,100))
+		pg.draw.rect(screen, GREY45, (screen.get_size()[0]//2-200, screen.get_size()[1]//2-200, 400,400))
+
+
+		pause = self.font.render("PAUSE", True, WHITE)
+		screen.blit(pause, (screen.get_size()[0]//2 - pause.get_width()//2,screen.get_size()[1]//2-190))
+
+		# STATS
+		speed = self.font20.render(f"SPEED: {self.player.speed}/{self.player.max_speed}", True, WHITE)
+		screen.blit(speed, (screen.get_size()[0]//2-190,screen.get_size()[1]//2-100))
+
 
 		pg.display.flip()
 
